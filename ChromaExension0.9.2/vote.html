@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+	<head>
+		<title>ChromaHills Network App</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			/* Main workings of style */
+			body {
+				width: 320px;
+				font-family: 'Open Sans',arial,sans-serif;
+			}
+			p {
+				margin: 0;
+			}
+			#status {
+				padding: 10px;
+			}
+			#options {
+				text-align: center;
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+			.list-group {
+				margin: 0;
+			}
+			p.red {
+				font-size: 13px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			.below {
+				text-align: center;
+			}
+
+			.versionr {
+				position: fixed;
+				color: rgb(204, 204, 204);
+				right: 0;
+				bottom: 0;
+				margin: 10px;
+				font-size: 15px;
+				font-family: "Trebuchet MS", Helvetica;
+			}
+
+			.version {
+				position: fixed;
+				color: rgb(204, 204, 204);
+				left: 0;
+				bottom: 0;
+				margin: 10px;
+				font-size: 15px;
+				font-family: "Trebuchet MS", Helvetica;
+			}
+			a.r:hover {
+				color: #D38F00;
+			}
+			a.r {
+				color: #FAAA00;
+			}
+			a.r {
+				color: rgba(250, 170, 0, 0.68);
+				text-decoration: none;
+			}
+
+			/* THE SEXY SCROLLER */
+			html {
+			}
+			body {
+			padding: 5px;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			min-width: 380px;
+			}
+			::-webkit-scrollbar {
+			    width: 12px;
+			}
+			::-webkit-scrollbar-track {
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+			    -webkit-border-radius: 10px;
+			    border-radius: 10px;
+			}
+			::-webkit-scrollbar-thumb {
+			    -webkit-border-radius: 10px;
+			    border-radius: 10px;
+			    background: #3271A8;
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+			}
+			::-webkit-scrollbar-thumb:window-inactive {
+				background: rgba(66, 139, 202, 0.71);
+			}
+
+			/* For hover over players */
+			a.info{
+			    position:relative; /*this is the key*/
+			    color:#000;
+			    text-decoration:none;
+			    text-align:center;
+			}
+
+			a.info span{display: none}
+
+			a.info:hover span{ /*the span will display just on :hover state*/
+			    display: block;
+				position: fixed;
+				width: 8em;
+				/* background-color: #FFFFFF; */
+				color: #000;
+				text-align: center;
+				padding: 3px;
+				right: 0;
+				top: 0;
+				margin-top: 41px;
+				margin-right: 23px;
+			}
+
+			a.info:hover span:after{ /*the span will display just on :hover state*/
+			    content:'';
+			    position:absolute;
+			    bottom:-11px;
+			    width:10px;
+			    height:10px;
+			    border-bottom:5px solid #0cf;
+			    border-right:5px solid #0cf;
+			    background:#cff;
+			    left:50%;
+			    margin-left:-5px;
+			    -moz-transform:rotate(45deg);
+			    -webkit-transform:rotate(45deg);
+			    transform:rotate(45deg);
+			}
+			div.voting {
+				margin: 35px;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="images/header.png" alt="Smiley face" width="300"><br><br>
+		<div class="below">
+			<p class="red">Vote for us to show your support and<br>get reward ingame chromas!<br>make sure to keep voting every day!
+			<hr>
+			<div class="voting">
+			<a href="http://minecraftservers.org/server/122452" target="_blank">
+		  		<button class="btn btn-success btn-block">Minecraft Servers</button>
+		  	</a>
+		  	<a href="http://minecraft-mp.com/server-s38321" target="_blank">
+		  		<button class="btn btn-warning btn-block">Minecraft MP</button>
+		  	</a>
+		  	<a href="https://minestatus.net/106316-chroma-hills">
+				<button class="btn btn-info btn-block">Mine Status</button>
+		  	</a>
+		  	<a href="http://www.planetminecraft.com/server/chroma-hills-factions---100k-custom-biome-world---custom-dungeons---custom-loot-more/vote/" target="_blank">
+		  		<button class="btn btn-danger btn-block">Planet Minecraft</button>
+		  	</a>
+
+		</div><br><br>
+			<div class="version">v0.9.2 - Beta</div>
+			<div class="versionr">
+				<a class="r" href="info.html">Info</a>
+			</div>
+			<div class="network"><div id="texthere"></div></div>
+			<br><br>
+		</div>
+
+	</body>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/popup.js"></script>
+	<script src="js/network.js"></script>
+</html>
+

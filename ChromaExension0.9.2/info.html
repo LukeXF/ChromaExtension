@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+	<head>
+		<title>ChromaHills Network App</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+		<style>
+
+			/* Main workings of style */
+			body {
+				width: 320px;
+				font-family: 'Open Sans',arial,sans-serif;
+			}
+			p {
+				margin: 0;
+			}
+			#status {
+				padding: 10px;
+			}
+			#options {
+				text-align: center;
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+			.list-group {
+				margin: 0;
+			}
+			p.red {
+				font-size: 13px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			.below {
+				text-align: center;
+			}
+
+			.versionr {
+				position: fixed;
+				color: rgb(204, 204, 204);
+				right: 0;
+				bottom: 0;
+				margin: 10px;
+				font-size: 15px;
+				font-family: "Trebuchet MS", Helvetica;
+			}
+
+			.version {
+				position: fixed;
+				color: rgb(204, 204, 204);
+				left: 0;
+				bottom: 0;
+				margin: 10px;
+				font-size: 15px;
+				font-family: "Trebuchet MS", Helvetica;
+			}
+			a.r:hover {
+				color: #D38F00;
+			}
+			a.r {
+				color: #FAAA00;
+			}
+			a.r {
+				color: rgba(250, 170, 0, 0.68);
+				text-decoration: none;
+			}
+
+			/* THE SEXY SCROLLER */
+			html {
+			}
+			body {
+			padding: 5px;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			min-width: 380px;
+			}
+			::-webkit-scrollbar {
+			    width: 12px;
+			}
+			::-webkit-scrollbar-track {
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+			    -webkit-border-radius: 10px;
+			    border-radius: 10px;
+			}
+			::-webkit-scrollbar-thumb {
+			    -webkit-border-radius: 10px;
+			    border-radius: 10px;
+			    background: #3271A8;
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+			}
+			::-webkit-scrollbar-thumb:window-inactive {
+				background: rgba(66, 139, 202, 0.71);
+			}
+
+			/* For hover over players */
+			a.info{
+			    position:relative; /*this is the key*/
+			    color:#000;
+			    text-decoration:none;
+			    text-align:center;
+			}
+
+			a.info span{display: none}
+
+			a.info:hover span{ /*the span will display just on :hover state*/
+			    display: block;
+				position: fixed;
+				width: 8em;
+				/* background-color: #FFFFFF; */
+				color: #000;
+				text-align: center;
+				padding: 3px;
+				right: 0;
+				top: 0;
+				margin-top: 41px;
+				margin-right: 23px;
+			}
+
+			a.info:hover span:after{ /*the span will display just on :hover state*/
+			    content:'';
+			    position:absolute;
+			    bottom:-11px;
+			    width:10px;
+			    height:10px;
+			    border-bottom:5px solid #0cf;
+			    border-right:5px solid #0cf;
+			    background:#cff;
+			    left:50%;
+			    margin-left:-5px;
+			    -moz-transform:rotate(45deg);
+			    -webkit-transform:rotate(45deg);
+			    transform:rotate(45deg);
+			}
+		</style>
+	</head>
+	<body>
+		<img src="images/header.png" alt="Smiley face" width="300">
+		<div class="below">
+			<hr>
+			<p class="red">This Google Chrome was developed by <a href="http:/.luke.sx">Luke Brown</a>, webdevelop and systems administrator for the Chroma Hills network. If you have any questions or you are looking for quality Minecraft hosting then click the links below.</p><br>
+		  	<a href="skype:diamondxf" target="_blank">
+		  		<button type="button" class="btn btn-info">Skype</button>
+		  	</a>
+		  	<a href="http://luke.sx" target="_blank">
+				<button type="button" class="btn btn-info">My Site</button>
+			</a>
+			<a href="https://galacticservers.com" target="_blank">
+				<button type="button" class="btn btn-info">Hosting</button>
+			</a>
+			<a href="https://twitter.com/DiamondXF" target="_blank">
+				<button type="button" class="btn btn-info">Twitter</button>
+			</a>
+			<hr>
+			<p class="red">If you want to see something added to this extension or something new on the site, you want to say <i>well done, cool app!</i> Or maybe you have a suggestion for us to improve on? Then let us know by clicking here <a href="#">here</a> and we will be happy to hear what you have to say.</p><br>
+		  	<a href="https://chrome.google.com/webstore/support/ekeioodpmcbhkjjhfpdcdgfomejnkkmm?hl=en&amp;gl=GB#bug" target="_blank">
+		  		<button type="button" class="btn btn-info">Give Feedback</button>
+		  	</a>
+		  	<a href="https://chrome.google.com/webstore/detail/chroma-hills-go/ekeioodpmcbhkjjhfpdcdgfomejnkkmm/reviews" target="_blank">
+				<button type="button" class="btn btn-info">Review the App!</button>
+			</a>
+			<br><br>
+			<div class="version">v0.9.2 - Beta</div>
+			<div class="versionr">
+				<a class="r" href="popup.html">Go Back</a>
+			</div>
+			<div class="network"><div id="texthere"></div></div>
+			<br><br>
+		</div>
+
+	</body>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/popup.js"></script>
+	<!--CC YOU BROKE THIS SHIT--><script src="js/network.js"></script>
+</html>
+

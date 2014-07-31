@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+	<head>
+		<title>ParadiseMC Network App</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			/* The Network IP */
+			.network {
+			position: fixed;
+			text-align: center;
+			width: 40%;
+			height: 30px;
+			border: 1px solid black;
+			bottom: 0;
+			margin-left: 30%;
+			padding: 0.3em;
+			color: #fff;
+			background-color: #1864A6;
+			border-color: #1864A6;
+			margin-bottom: -2px;
+			font-weight: normal;
+			text-align: center;
+			vertical-align: middle;
+			cursor: pointer;
+			background-image: none;
+			border: 1px solid transparent;
+			white-space: nowrap;
+			font-size: 14px;
+			line-height: 1.42857143;
+			border-radius: 4px;
+			-webkit-user-select: none;
+			}
+
+
+			/* Main workings of style */
+			body {
+				width: 320px;
+				font-family: 'Open Sans',arial,sans-serif;
+			}
+			p {
+				margin: 0;
+			}
+			#status {
+				padding: 10px;
+			}
+			#options {
+				text-align: center;
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+			.list-group {
+				margin: 0;
+			}
+			p.red {
+				font-size: 13px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			p.red2 {
+				font-size: 10px;
+				padding-left: 40px;
+				padding-right: 40px;
+			}
+			.below {
+				text-align: center;
+			}
+
+			.versionr {
+				position: fixed;
+				color: rgb(204, 204, 204);
+				right: 0;
+				bottom: 0;
+				margin: 10px;
+				font-size: 15px;
+				font-family: "Trebuchet MS", Helvetica;
+			}
+
+			.version {
+				position: fixed;
+				color: rgb(204, 204, 204);
+				left: 0;
+				bottom: 0;
+				margin: 10px;
+				font-size: 15px;
+				font-family: "Trebuchet MS", Helvetica;
+			}
+			a.r:hover {
+				color: #D38F00;
+			}
+			a.r {
+				color: #FAAA00;
+			}
+			a.r {
+				color: rgba(250, 170, 0, 0.68);
+				text-decoration: none;
+			}
+
+			/* THE SEXY SCROLLER */
+			html {
+			}
+			body {
+			padding: 5px;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			min-width: 380px;
+			}
+			::-webkit-scrollbar {
+			    width: 12px;
+			}
+			::-webkit-scrollbar-track {
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+			    -webkit-border-radius: 10px;
+			    border-radius: 10px;
+			}
+			::-webkit-scrollbar-thumb {
+			    -webkit-border-radius: 10px;
+			    border-radius: 10px;
+			    background: #3271A8;
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+			}
+			::-webkit-scrollbar-thumb:window-inactive {
+				background: rgba(66, 139, 202, 0.71);
+			}
+
+			/* For hover over players */
+			a.info{
+			    position:relative; /*this is the key*/
+			    color:#000;
+			    text-decoration:none;
+			    text-align:center;
+			}
+
+			a.info span{display: none}
+
+			a.info:hover span{ /*the span will display just on :hover state*/
+			    display: block;
+				position: fixed;
+				width: 8em;
+				/* background-color: #FFFFFF; */
+				color: #000;
+				text-align: center;
+				padding: 3px;
+				right: 0;
+				top: 0;
+				margin-top: 55px;
+				margin-right: 15px;
+			}
+
+			a.info:hover span:after{ /*the span will display just on :hover state*/
+			    content:'';
+			    position:absolute;
+			    bottom:-11px;
+			    width:10px;
+			    height:10px;
+			    border-bottom:5px solid #0cf;
+			    border-right:5px solid #0cf;
+			    background:#cff;
+			    left:50%;
+			    margin-left:-5px;
+			    -moz-transform:rotate(45deg);
+			    -webkit-transform:rotate(45deg);
+			    transform:rotate(45deg);
+			}
+		</style>
+	</head>
+	<body>
+		<img src="images/header.png" alt="Smiley face" width="300">
+		<div id="status" class="list-group"></div>
+		<div class="below">
+			<p class="red">Welcome to the CH Network APP. Here you use this handy tool to quickly get your most important places!</p><br>
+			<p class="red2">Please not that This list may appear slow at loading and Factions will most likely show as offline until June</p>
+			<hr>
+		  	<a href="http://chromahills.net/" target="_blank">
+		  		<button type="button" class="btn btn-default">Website</button>
+		  	</a>
+		  	<a href="http://www.chromahills.com/forum/" target="_blank">
+				<button type="button" class="btn btn-danger">Forum</button>
+			</a>
+			<a href="vote.html">
+				<button type="button" class="btn btn-info">Vote</button>
+			</a>
+			<a href="http://chromahills.net/donate.php" target="_blank">
+				<button type="button" class="btn btn-warning">Shop</button>
+			</a>
+			<br><br>
+			<div class="version">v0.9.2 - Beta</div>
+			<div class="versionr">
+				<a class="r" href="info.html">Info</a>
+			</div>
+			<div class="network"><div id="texthere"></div></div>
+			<br><br>
+		</div>
+
+	</body>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/popup.js"></script>
+	<!--CC YOU BROKE THIS SHIT--><script src="js/network.js"></script>
+</html>
+
